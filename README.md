@@ -1,3 +1,7 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1f9504e4f58e4dd78202602a46d72fcc)](https://app.codacy.com/app/javawebinar/topjava)
+[![Build Status](https://travis-ci.org/JavaWebinar/topjava.svg?branch=master)](https://travis-ci.org/JavaWebinar/topjava)
+
+
 Java Enterprise Online Project
 ===============================
 
@@ -14,7 +18,7 @@ Maven/ Spring/ Security/ JPA(Hibernate)/ REST(Jackson)/ Bootstrap(CSS)/ jQuery +
 #### 31.01: Старт проекта
 - Начало проверки [вступительного задания](https://github.com/JavaOPs/topjava#-Домашнее-задание-hw0)
 
-#### 07.01: 1-е занятие
+#### 07.02: 1-е занятие
 - Разбор домашнего задания вступительного занятия (вместе с Optional)
 - Обзор используемых в проекте технологий. Интеграция ПО
 - Maven
