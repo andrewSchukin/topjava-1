@@ -55,7 +55,9 @@ GROUP BY u.id
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png)  4. [Миграция на JUnit 5](https://drive.google.com/open?id=16wi0AJLelso-dPuDj6xaGL7yJPmiO71e)
 #### Apply 7_08_JUnit5.patch
-> [No need `junit-platform-surefire-provider` dependency in `maven-surefire-plugin`](https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven)
+> - [No need `junit-platform-surefire-provider` dependency in `maven-surefire-plugin`](https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven)
+> - [IDEA пока не понимает аннотации `@SpringJUnitConfig`](https://youtrack.jetbrains.com/issue/IDEA-166549). Можно временно поменять на `SpringJUnitConfig + @ExtendWith`. Не забудте залогинится и проголосовать за починку бага (справа вверху).
+
 
 - [JUnit 5 homepage](https://junit.org/junit5)
 - [Overview](https://junit.org/junit5/docs/snapshot/user-guide/#overview)
@@ -178,4 +180,3 @@ hamcrest-all используется в проверках `RootControllerTest`
 - 6: **Проверьте выполение ВСЕХ тестов через maven**. В случае проблем проверьте, что не портите константу из `MealTestData`
 - 7: `@Autowired` в тестах нужно делать в том месте, где класс будет использоваться. Общий принцип: не размазывать код по классам, объявление переменных держать как можно ближе к ее использованию, группировать (не смешивать) код с разной функциональностью.
 - 8: Попробуйте в `RootControllerTest.testMeals` сделать сравнение через `model().attribute("meals", expectedValue)`. Учтите, что вывод результатов через `toString` к сравнению отношения не имеет
-- 9: Посмотрите, нет ли в `MealTestData` методов, которые можно сделать общими (через generic и `TestUtil`)
